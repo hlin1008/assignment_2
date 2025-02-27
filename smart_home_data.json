@@ -1,0 +1,13 @@
+{
+    "users": {
+        "john@example.com": {
+            "username": "John",
+            "email": "john@example.com",
+            "password": "secure123",
+            "role": "admin"
+        }
+    },
+    "houses": {},
+    "rooms": {},
+    "devices": {}
+}
