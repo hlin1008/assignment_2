@@ -109,8 +109,8 @@ class User():
         return f"User {email} deleted."
 
 
-# Device Class
-class Device():
+# House Class
+class House():
     def __init__(self, username: str, email: str, password: str, role: str):
         self.username = username
         self.email = email
@@ -183,7 +183,6 @@ class Device():
         del db["users"][email]
         save_data(db)
         return f"User {email} deleted."
-
 
 
 # Room Class
@@ -261,15 +260,12 @@ class Room():
         save_data(db)
         return f"User {email} deleted."
 
-
-
-# House Class
-class House():
-    def __init__(self, username: str, email: str, password: str, role: str):
-        self.username = username
-        self.email = email
-        self.password = password
-        self.role = role
+# Device Class
+class Device():
+    def __init__(self, name: str, in_room: Room, device_type: str):
+        self.name = name
+        self.device_type = device_type
+        self.room = in_room
 
     @classmethod
     def create(cls, username: str, email: str, password: str, role: str):
@@ -337,6 +333,9 @@ class House():
         del db["users"][email]
         save_data(db)
         return f"User {email} deleted."
+
+
+
 
 
 
